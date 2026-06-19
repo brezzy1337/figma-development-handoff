@@ -3,8 +3,8 @@
   "description": "Build a labeled, routed developer-handoff page from Figma screens, then scaffold routes, components, and states from it in code. Bundles figma-development-handoff (producer) and figma-handoff-to-code (consumer).",
   "version": "0.1.0",
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com"
+    "name": "Devin Phat",
+    "email": "devin.phat97@gmail.com"
   },
   "homepage": "https://github.com/your-org/figma-handoff",
   "repository": "https://github.com/your-org/figma-handoff",
