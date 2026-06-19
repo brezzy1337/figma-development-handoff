@@ -1,0 +1,17 @@
+{
+  "name": "figma-handoff",
+  "owner": {
+    "name": "Your Name",
+    "email": "you@example.com"
+  },
+  "description": "Marketplace hosting the figma-handoff plugin: producer/consumer skills for Figma developer handoffs.",
+  "plugins": [
+    {
+      "name": "figma-handoff",
+      "source": "./",
+      "description": "Build a labeled, routed developer-handoff page from Figma screens, then scaffold routes, components, and states from it in code.",
+      "version": "0.1.0",
+      "keywords": ["figma", "handoff", "design-to-code", "routing", "skills"]
+    }
+  ]
+}
