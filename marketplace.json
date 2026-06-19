@@ -1,8 +1,8 @@
 {
   "name": "figma-handoff",
   "owner": {
-    "name": "Your Name",
-    "email": "you@example.com"
+    "name": "Devin Phat",
+    "email": "devin.phat97@gmail.com"
   },
   "description": "Marketplace hosting the figma-handoff plugin: producer/consumer skills for Figma developer handoffs.",
   "plugins": [
