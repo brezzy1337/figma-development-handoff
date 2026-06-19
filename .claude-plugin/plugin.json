@@ -1,13 +1,13 @@
 {
-  "name": "figma-handoff",
-  "description": "Build a labeled, routed developer-handoff page from Figma screens, then scaffold routes, components, and states from it in code. Bundles figma-development-handoff (producer) and figma-handoff-to-code (consumer).",
+  "name": "figma-claude-code-handoff",
+  "description": "Build a labeled, routed developer-handoff page from Figma screens, then scaffold routes, components, and states from it in code. Bundles figma-handoff-builder (producer) and figma-handoff-to-code (consumer).",
   "version": "0.1.0",
   "author": {
     "name": "Devin Phat",
     "email": "devin.phat97@gmail.com"
   },
-  "homepage": "https://github.com/your-org/figma-handoff",
-  "repository": "https://github.com/your-org/figma-handoff",
+  "homepage": "https://github.com/brezzy1337/figma-development-handoff",
+  "repository": "https://github.com/brezzy1337/figma-development-handoff",
   "license": "MIT",
   "keywords": ["figma", "handoff", "design-to-code", "routing", "skills"]
 }

@@ -2,7 +2,7 @@
 
 ## Figma developer handoffs
 
-This project is implemented from **developer-handoff pages** produced by the `figma-development-handoff` skill. When asked to implement, scaffold, or build from a Figma handoff, screen-flow, or routing map:
+This project is implemented from **developer-handoff pages** produced by the `figma-handoff-builder` skill. When asked to implement, scaffold, or build from a Figma handoff, screen-flow, or routing map:
 
 - Use the **`figma-handoff-to-code`** skill — or read **`.claude/figma-handoff-legend.md`** — to interpret the conventions before writing code.
 - Screen frames are named **`FLOW-## · Name`** → one route + one screen component each; implement in ascending `##` order within each flow.

@@ -1,13 +1,13 @@
 ---
 name: figma-handoff-to-code
-description: Interpret a developer-handoff page produced by the figma-development-handoff skill — its FLOW-## screen IDs, .load/.empty/.err state suffixes, per-screen Entry/Guard/Next/Route chips, destination-named buttons (e.g. "PLAN-03 button"), APP ENTRY node, and trigger-labeled connectors — and turn it into application code — a route map, one screen component per ID (with its loading/empty/error states), navigation wiring, route guards, and launch/redirect logic. Use this whenever the user wants to implement, scaffold, or build an app or feature from a Figma dev handoff, a screen-flow, or a routing map; references a figma-handoff-legend.md; or asks to turn FLOW-## screens or a handoff page into routes, screens, or components. Reads the handoff from the Figma MCP or an exported/emitted file. This is the consumer counterpart to the figma-development-handoff skill.
+description: Interpret a developer-handoff page produced by the figma-handoff-builder skill — its FLOW-## screen IDs, .load/.empty/.err state suffixes, per-screen Entry/Guard/Next/Route chips, destination-named buttons (e.g. "PLAN-03 button"), APP ENTRY node, and trigger-labeled connectors — and turn it into application code — a route map, one screen component per ID (with its loading/empty/error states), navigation wiring, route guards, and launch/redirect logic. Use this whenever the user wants to implement, scaffold, or build an app or feature from a Figma dev handoff, a screen-flow, or a routing map; references a figma-handoff-legend.md; or asks to turn FLOW-## screens or a handoff page into routes, screens, or components. Reads the handoff from the Figma MCP or an exported/emitted file. This is the consumer counterpart to the figma-handoff-builder skill.
 ---
 
 # Figma Handoff → Code
 
 ## What this is for
 
-You are the **consumer** of a developer handoff. Someone (often the `figma-development-handoff` skill) produced a Figma page where every app screen is labeled with a stable ID, tagged with a routing chip, wired with connectors, and has its buttons named by destination. Your job is to translate that faithfully into code — a route map, screen components, their states, navigation, and guards — **without re-deciding the app's structure**. The handoff already made those decisions; honor them.
+You are the **consumer** of a developer handoff. Someone (often the `figma-handoff-builder` skill) produced a Figma page where every app screen is labeled with a stable ID, tagged with a routing chip, wired with connectors, and has its buttons named by destination. Your job is to translate that faithfully into code — a route map, screen components, their states, navigation, and guards — **without re-deciding the app's structure**. The handoff already made those decisions; honor them.
 
 ## Step 0 — Install the legend into `.claude/`, then read it
 
@@ -60,4 +60,4 @@ Surface ambiguities to the user instead of inventing answers: a `<DEST> button` 
 
 ## Relationship to the producer
 
-This skill is the read/implement half of a pair. The write/design half is `figma-development-handoff`, which builds the handoff page and emits the legend. If you find yourself wanting to *change* the handoff (rename IDs, re-route screens), that's the producer's job — do it there so the page stays the single source of truth, then consume the updated version here.
+This skill is the read/implement half of a pair. The write/design half is `figma-handoff-builder`, which builds the handoff page and emits the legend. If you find yourself wanting to *change* the handoff (rename IDs, re-route screens), that's the producer's job — do it there so the page stays the single source of truth, then consume the updated version here.

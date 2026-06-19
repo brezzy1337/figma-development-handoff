@@ -1,13 +1,13 @@
 {
-  "name": "figma-handoff",
+  "name": "figma-claude-code-handoff",
   "owner": {
     "name": "Devin Phat",
     "email": "devin.phat97@gmail.com"
   },
-  "description": "Marketplace hosting the figma-handoff plugin: producer/consumer skills for Figma developer handoffs.",
+  "description": "Marketplace hosting the figma-claude-code-handoff plugin: producer/consumer skills for Figma developer handoffs.",
   "plugins": [
     {
-      "name": "figma-handoff",
+      "name": "figma-claude-code-handoff",
       "source": "./",
       "description": "Build a labeled, routed developer-handoff page from Figma screens, then scaffold routes, components, and states from it in code.",
       "version": "0.1.0",

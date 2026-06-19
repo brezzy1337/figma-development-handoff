@@ -1,5 +1,5 @@
 ---
-name: figma-development-handoff
+name: figma-handoff-builder
 description: Turn an existing set of Figma screens into a developer-facing handoff page — screens copied onto a dedicated page, labeled with a stable ID system (FLOW-## · Name), tagged with per-screen routing chips, and wired together with trigger-labeled connectors — so engineers know what to build, in what order, and how the screens relate. Use this skill whenever the user wants a "handover," "dev handoff," "developer handoff," a "screen flow" or "routing map," wants to show "how screens connect," or wants to prep / organize Figma designs for engineering — even if they don't say "skill" or name the exact format. Also trigger when someone has a set of Figma screens and asks what engineers should build first, how the screens route to each other, or how to organize designs for the eng team. Requires the Figma MCP (use_figma, get_metadata, get_screenshot).
 ---
 

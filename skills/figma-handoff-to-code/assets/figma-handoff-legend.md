@@ -1,6 +1,6 @@
 # Handoff legend — reading a Figma developer-handoff page
 
-This decodes a developer-handoff page produced by the **figma-development-handoff** skill: a set of app screens copied onto one Figma page, each labeled and wired so you can implement the app from it — what to build, in what order, how screens relate, and where each control leads.
+This decodes a developer-handoff page produced by the **figma-handoff-builder** skill: a set of app screens copied onto one Figma page, each labeled and wired so you can implement the app from it — what to build, in what order, how screens relate, and where each control leads.
 
 Read this first, then walk the page (via the Figma MCP `get_metadata`, or an export the producer emitted) and turn it into code. This legend is the contract between the design handoff and the implementation; honor it rather than re-deciding the app's structure.
 

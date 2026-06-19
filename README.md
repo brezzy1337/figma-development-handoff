@@ -1,27 +1,27 @@
-# figma-handoff
+# figma-claude-code-handoff
 
 A Claude Code plugin bundling a producer/consumer pair of skills for **Figma developer handoffs** — build a labeled, routed handoff page from Figma screens, then scaffold code from it. This repo is both the plugin and the marketplace that distributes it.
 
 ## Install
 
 ```shell
-/plugin marketplace add your-org/figma-handoff
-/plugin install figma-handoff@figma-handoff
+/plugin marketplace add your-org/figma-claude-code-handoff
+/plugin install figma-claude-code-handoff@figma-claude-code-handoff
 ```
 
-For local testing before pushing: `/plugin marketplace add ./figma-handoff` then the same install.
+For local testing before pushing: `/plugin marketplace add ./figma-claude-code-handoff` then the same install.
 
 ## What's inside
 
 ```
-figma-handoff/                          # repo root = marketplace AND plugin
+figma-claude-code-handoff/              # repo root = marketplace AND plugin
 ├── .claude-plugin/
 │   ├── marketplace.json                # catalog; the one plugin entry has source "./"
 │   └── plugin.json                     # plugin manifest
 ├── LICENSE
 ├── README.md
 └── skills/
-    ├── figma-development-handoff/      # producer — builds the handoff page (+ emits the legend)
+    ├── figma-handoff-builder/          # producer — builds the handoff page (+ emits the legend)
     │   ├── SKILL.md
     │   ├── assets/                     # figma-handoff-legend.md (emitted into the user's repo)
     │   └── references/                 # figma-mcp.md (safe-mutation guidance)
@@ -34,10 +34,10 @@ figma-handoff/                          # repo root = marketplace AND plugin
 
 | Skill | Role |
 |-------|------|
-| `figma-development-handoff` | **Producer.** Builds a dedicated handoff page from your Figma screens: stable `FLOW-## · Name` IDs, `.load`/`.empty`/`.err` state suffixes, a four-line chip per frame (Entry / Guard / Next / Route), routing buttons renamed to their destination (`PLAN-03 button`), an `APP ENTRY` decision node, and trigger-labeled connectors. Emits the decoder legend to `.claude/figma-handoff-legend.md`. Requires the Figma MCP. |
+| `figma-handoff-builder` | **Producer.** Builds a dedicated handoff page from your Figma screens: stable `FLOW-## · Name` IDs, `.load`/`.empty`/`.err` state suffixes, a four-line chip per frame (Entry / Guard / Next / Route), routing buttons renamed to their destination (`PLAN-03 button`), an `APP ENTRY` decision node, and trigger-labeled connectors. Emits the decoder legend to `.claude/figma-handoff-legend.md`. Requires the Figma MCP. |
 | `figma-handoff-to-code` | **Consumer.** Reads a handoff (the emitted legend + the Figma MCP, or an export) and scaffolds the implementation: a route map, one screen component per ID with its states, navigation wiring, route guards, and launch/redirect logic — in whatever framework the repo already uses. |
 
-Installed, the skills are namespaced `figma-handoff:figma-development-handoff` and `figma-handoff:figma-handoff-to-code`, and Claude invokes them when your request matches.
+Installed, the skills are namespaced `figma-claude-code-handoff:figma-handoff-builder` and `figma-claude-code-handoff:figma-handoff-to-code`, and Claude invokes them when your request matches.
 
 ### assets vs references
 
@@ -46,7 +46,7 @@ Installed, the skills are namespaced `figma-handoff:figma-development-handoff` a
 
 ## The loop
 
-1. **Design side:** `figma-development-handoff` builds the handoff page and writes `.claude/figma-handoff-legend.md`.
+1. **Design side:** `figma-handoff-builder` builds the handoff page and writes `.claude/figma-handoff-legend.md`.
 2. **Code side:** `figma-handoff-to-code` reads that legend (installing it from its own `assets/` on first run if absent) and scaffolds routes, components, and states.
 
 A handoff produced this way is self-describing: the legend travels with it, so any reader — agent or human — can decode the conventions.
